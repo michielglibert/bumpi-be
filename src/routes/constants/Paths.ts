@@ -1,9 +1,10 @@
 const Paths = {
-	Base: "/api",
-	Test: {
-		Base: "/test",
-		Get: "/",
-	},
+  Base: "/api",
+  User: {
+    Base: "/users",
+    Get: "/",
+    Add: "/",
+  },
 };
 
 export default Paths;

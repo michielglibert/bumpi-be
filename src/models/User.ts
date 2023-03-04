@@ -1,20 +1,13 @@
-class User {
-	public id: number;
-	public name: string;
-	public email: string;
-	public pwdHash?: string;
+import { v4 as uuidv4 } from "uuid";
 
-	public constructor(
-		name?: string,
-		email?: string,
-		pwdHash?: string,
-		id?: number
-	) {
-		this.name = name ?? "";
-		this.email = email ?? "";
-		this.pwdHash = pwdHash ?? "";
-		this.id = id ?? -1;
-	}
+class User {
+  public id: string;
+  public name: string;
+
+  public constructor(name?: string, id?: string) {
+    this.name = name ?? "";
+    this.id = id ?? uuidv4();
+  }
 }
 
 export default User;

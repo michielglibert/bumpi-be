@@ -1,25 +1,8 @@
 {
-	"users": [
-		{
-			"name": "Sean Maxwell",
-			"email": "sean.maxwell@gmail.com",
-			"pwdHash": "$2b$12$1mE2OI9hMS/rgH9Mi0s85OM2V5gzm7aF3gJIWH1y0S1MqVBueyjsy",
-			"role": 1,
-			"id": 159123164363
-		},
-		{
-			"name": "Gordan Freeman",
-			"email": "gordan.freeman@halflife.com",
-			"pwdHash": "$2b$12$1mE2OI9hMS/rgH9Mi0s85OM2V5gzm7aF3gJIWH1y0S1MqVBueyjsy",
-			"role": 0,
-			"id": 906524522143
-		},
-		{
-			"name": "John Smith",
-			"email": "jsmith@yahoo.com",
-			"pwdHash": "$2b$12$1mE2OI9hMS/rgH9Mi0s85OM2V5gzm7aF3gJIWH1y0S1MqVBueyjsy",
-			"role": 0,
-			"id": 357437875835
-		}
-	]
+  "users": [
+    { "name": "Sean Maxwell", "id": "874d1bc5-20fd-448f-96e2-f8e24e81d8e8" },
+    { "name": "Gordan Freeman", "id": "b17bf2bd-1981-4758-b264-781a0044372f" },
+    { "name": "John Smith", "id": "7d9baabd-ac7f-44ff-8129-d08c9a8e062e" },
+    { "name": "ewfewfwewe", "id": "b4aa4e0e-75cf-4bef-a1a9-a9fce926a00a" }
+  ]
 }

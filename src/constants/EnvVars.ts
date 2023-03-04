@@ -9,6 +9,6 @@ export default {
 	Port: process.env.PORT ?? 0,
 	Jwt: {
 		Secret: process.env.JWT_SECRET ?? "",
-		Exp: process.env.JWT_EXP ?? "", // exp at the same time as the cookie
+		Exp: process.env.JWT_EXP ?? "",
 	},
 } as const;
