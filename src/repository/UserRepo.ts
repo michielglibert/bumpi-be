@@ -1,16 +1,22 @@
-import User from "../models/User";
 import orm from "./MockOrm";
 import { v4 as uuidv4 } from "uuid";
+import { PrismaClient } from "@prisma/client";
+import { User } from ".prisma/client";
+
+const prisma = new PrismaClient();
 
 async function getAll(): Promise<User[]> {
-  const db = await orm.openDb();
-  return db.users;
+  const users = await prisma.user.findMany();
+  return users;
 }
 
-async function createUser(username: string): Promise<void> {
-  const db = await orm.openDb();
-  db.users.push(new User(username, uuidv4()));
-  return orm.saveDb(db);
+async function createUser(username: string): Promise<User> {
+  const user = await prisma.user.create({
+    data: {
+      name: username,
+    },
+  });
+  return user;
 }
 
 export default { getAll, createUser };
