@@ -1,11 +1,13 @@
 import HttpStatusCodes from "@src/constants/HttpStatusCodes";
-import UserService from "@src/services/UserService";
+import RoomService from "@src/services/RoomService";
 import { Handler } from "express";
 
-const createUser: Handler = async (req, res) => {
-  const { username } = req.body;
+const joinRoom: Handler = async (req, res) => {
+  const { roomId, userId } = req.body;
+
+  let room;
   try {
-    await UserService.createUser(username);
+    room = await RoomService.joinRoom(userId, roomId);
   } catch (e) {
     return res.status(HttpStatusCodes.INTERNAL_SERVER_ERROR).json({ error: e });
   }
@@ -13,5 +15,5 @@ const createUser: Handler = async (req, res) => {
 };
 
 export default {
-  createUser,
+  joinRoom,
 };

@@ -1,9 +1,15 @@
 const Paths = {
   Base: "/api",
-  User: {
+  Users: {
     Base: "/users",
     Get: "/",
     Add: "/",
+  },
+  Rooms: {
+    Base: "/rooms",
+    Get: "/:id",
+    Add: "/",
+    Update: "/",
   },
 };
 

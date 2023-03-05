@@ -9,7 +9,7 @@
     "lint:tests": "npx eslint --ext .ts spec/",
     "start": "node -r module-alias/register ./dist --env=production",
     "dev": "nodemon",
-    "migrate:postgres": "dotenv -e ./env/development.env -- npx prisma migrate deploy"
+    "migrate:postgres": "dotenv -e ./env/development.env -- npx prisma migrate dev"
   },
   "nodemonConfig": {
     "watch": [
